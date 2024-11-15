@@ -166,9 +166,8 @@ body {
     align-items: center; /* Centra el contenido horizontalmente */
     justify-content: center; /* Centra el contenido verticalmente */
     text-align: center; /* Centra el texto */
-}
 
-    /* Estilos para centrar el contenido */
+        /* Estilos para centrar el contenido */
 .tarjetas .centered-content {
     max-width: 600px;
     padding: 20px;
@@ -288,6 +287,9 @@ body {
     color: #5a5a5a; /* Texto gris oscuro al pasar el ratón */
 }
 
+}
+
+
 
 
 
@@ -304,39 +306,41 @@ body {
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen en el contenedor */
     color: white; /* Color de texto blanco, cambia según tu imagen */
+
+    .segunda-foto-section .text-content p {
+        font-size: 0.8em;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    
+    .segunda-foto-section .text-content h1 {
+        font-size: 2em;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    
+    .segunda-foto-section text-content {
+        display: flex; /* Usa flexbox para el contenido del texto */
+        flex-direction: column; /* Coloca h1 y p en una columna */
+        max-width: 60%; /* Ajusta el ancho máximo del texto */
+    }
+    
+    .segunda-foto-section a {
+        background-color: var(--secondary-color);
+        color: white; /* Color del texto del enlace */
+        padding: 5px 10px; /* Espaciado interno del enlace */
+        border-radius: 5px; /* Bordes redondeados */
+        text-decoration: none; /* Sin subrayado */
+        transition: background-color 0.3s; /* Transición suave para el fondo */
+        margin: 0 10%;
+    }
+    
+    .segunda-foto-section a:hover {
+        background-color: lightgray; /* Cambio de fondo al pasar el mouse */
+    }
+    
 }
 
-.segunda-foto-section .text-content p {
-    font-size: 0.8em;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.segunda-foto-section .text-content h1 {
-    font-size: 2em;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.segunda-foto-section text-content {
-    display: flex; /* Usa flexbox para el contenido del texto */
-    flex-direction: column; /* Coloca h1 y p en una columna */
-    max-width: 60%; /* Ajusta el ancho máximo del texto */
-}
-
-.segunda-foto-section a {
-    background-color: var(--secondary-color);
-    color: white; /* Color del texto del enlace */
-    padding: 5px 10px; /* Espaciado interno del enlace */
-    border-radius: 5px; /* Bordes redondeados */
-    text-decoration: none; /* Sin subrayado */
-    transition: background-color 0.3s; /* Transición suave para el fondo */
-    margin: 0 10%;
-}
-
-.segunda-foto-section a:hover {
-    background-color: lightgray; /* Cambio de fondo al pasar el mouse */
-}
 
 
 
@@ -348,49 +352,51 @@ body {
     padding: 20px; /* Espaciado interno */
     margin: 0 15%; /* Márgenes izquierdo y derecho de 10% */
     color: black; /* Color del texto, puedes cambiarlo según tu preferencia */
+
+    .seccion-imagen-y-texto .image-container {
+        position: relative; /* Establece un contenedor relativo para las imágenes */
+    }
+    
+    .seccion-imagen-y-texto img {
+        max-width: 30%; /* Hacer que la imagen de fondo ocupe todo el ancho disponible */
+        height: auto; /* Mantener la proporción de la imagen */
+    }
+    
+    .seccion-imagen-y-texto .overlay-image {
+        position: absolute; /* Posiciona la imagen de forma absoluta sobre la imagen de fondo */
+        top: 50%; /* Ajusta la distancia desde el top, puedes cambiar este valor */
+        left: 0%; /* Ajusta la distancia desde el left, puedes cambiar este valor */
+        width: 30%; /* Ajusta el tamaño de la imagen superpuesta */
+        height: auto; /* Mantiene la proporción de la imagen */
+        z-index: 10; /* Asegúrate de que la imagen esté por encima de la imagen de fondo */
+    }
+    
+    .seccion-imagen-y-texto .text-content {
+        max-width: 65%; /* Limitar el ancho del texto al 65% del contenedor */
+        margin-left: 20px; /* Espacio entre la imagen y el texto */
+    }
+    
+    .seccion-imagen-y-texto .text-content h1 {
+        font-size: 1em; /* Tamaño de letra más pequeño para el h1 */
+        margin: 0; /* Quitar márgenes por defecto del h1 */
+    }
+    
+    .seccion-imagen-y-texto .text-content article {
+        margin-top: 15px; /* Espaciado entre artículos */
+    }
+    
+    .seccion-imagen-y-texto .text-content h2 {
+        font-size: 0.8em; /* Tamaño de letra más pequeño para los h2 */
+        margin: 0; /* Quitar márgenes por defecto del h2 */
+    }
+    
+    .seccion-imagen-y-texto .text-content p {
+        font-size: 0.7em; /* Tamaño de letra más pequeño para los párrafos */
+        margin-top: 5px; /* Espaciado entre el h2 y el párrafo */
+    }
+    
 }
 
-.seccion-imagen-y-texto .image-container {
-    position: relative; /* Establece un contenedor relativo para las imágenes */
-}
-
-.seccion-imagen-y-texto img {
-    max-width: 30%; /* Hacer que la imagen de fondo ocupe todo el ancho disponible */
-    height: auto; /* Mantener la proporción de la imagen */
-}
-
-.seccion-imagen-y-texto .overlay-image {
-    position: absolute; /* Posiciona la imagen de forma absoluta sobre la imagen de fondo */
-    top: 50%; /* Ajusta la distancia desde el top, puedes cambiar este valor */
-    left: 0%; /* Ajusta la distancia desde el left, puedes cambiar este valor */
-    width: 30%; /* Ajusta el tamaño de la imagen superpuesta */
-    height: auto; /* Mantiene la proporción de la imagen */
-    z-index: 10; /* Asegúrate de que la imagen esté por encima de la imagen de fondo */
-}
-
-.seccion-imagen-y-texto .text-content {
-    max-width: 65%; /* Limitar el ancho del texto al 65% del contenedor */
-    margin-left: 20px; /* Espacio entre la imagen y el texto */
-}
-
-.seccion-imagen-y-texto .text-content h1 {
-    font-size: 1em; /* Tamaño de letra más pequeño para el h1 */
-    margin: 0; /* Quitar márgenes por defecto del h1 */
-}
-
-.seccion-imagen-y-texto .text-content article {
-    margin-top: 15px; /* Espaciado entre artículos */
-}
-
-.seccion-imagen-y-texto .text-content h2 {
-    font-size: 0.8em; /* Tamaño de letra más pequeño para los h2 */
-    margin: 0; /* Quitar márgenes por defecto del h2 */
-}
-
-.seccion-imagen-y-texto .text-content p {
-    font-size: 0.7em; /* Tamaño de letra más pequeño para los párrafos */
-    margin-top: 5px; /* Espaciado entre el h2 y el párrafo */
-}
 
 
 
@@ -403,33 +409,35 @@ body {
     justify-content:center; /* Espaciado entre los cuadros */
     gap: 30px; /* Espaciado entre los cuadros */
     flex-wrap: wrap; /* Permitir que los cuadros se envuelvan en múltiples filas */
+
+    .cuadro {
+        background: #ADD8E6; /* Azul claro para los rectángulos */
+        width: 200px; /* Ancho fijo para cada cuadro */
+        margin: 10px; /* Agregar margen en todos los lados */
+        padding: 20px; /* Espaciado interno en cada cuadro */
+        border-radius: 10px; /* Bordes redondeados */
+        color: black; /* Color del texto */
+        text-align: left; /* Centrando el texto dentro del cuadro */
+        box-shadow: 0 4px 8px rgba(0, 0, 0/ 20%); /* Sombra para mayor definición */
+    }
+    
+    .cuadro h1 {
+        font-size: 2em; /* Tamaño del h1 */
+        margin: 0; /* Sin margen */
+    }
+    
+    .cuadro h2 {
+        font-size: 1em; /* Tamaño del h2 */
+        margin: 10px 0; /* Margen arriba y abajo */
+    }
+    
+    .cuadro p {
+        font-size: 0.8em; /* Tamaño del párrafo */
+        margin: 10px 0; /* Margen arriba y abajo */
+    }
+    
 }
 
-.cuadro {
-    background: #ADD8E6; /* Azul claro para los rectángulos */
-    width: 200px; /* Ancho fijo para cada cuadro */
-    margin: 10px; /* Agregar margen en todos los lados */
-    padding: 20px; /* Espaciado interno en cada cuadro */
-    border-radius: 10px; /* Bordes redondeados */
-    color: black; /* Color del texto */
-    text-align: left; /* Centrando el texto dentro del cuadro */
-    box-shadow: 0 4px 8px rgba(0, 0, 0/ 20%); /* Sombra para mayor definición */
-}
-
-.cuadro h1 {
-    font-size: 2em; /* Tamaño del h1 */
-    margin: 0; /* Sin margen */
-}
-
-.cuadro h2 {
-    font-size: 1em; /* Tamaño del h2 */
-    margin: 10px 0; /* Margen arriba y abajo */
-}
-
-.cuadro p {
-    font-size: 0.8em; /* Tamaño del párrafo */
-    margin: 10px 0; /* Margen arriba y abajo */
-}
 
 
 
