@@ -30,7 +30,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     color: white; /* Texto blanco para visibilidad sobre la imagen */
-}
+
 
 /* Estilos para el header */
 .main-header {
@@ -157,6 +157,9 @@ body {
 }
 
 
+}
+
+
 
 
 .tarjetas {
@@ -168,7 +171,7 @@ body {
     text-align: center; /* Centra el texto */
 
         /* Estilos para centrar el contenido */
-.tarjetas .centered-content {
+.centered-content {
     max-width: 600px;
     padding: 20px;
     box-sizing: border-box;
@@ -187,7 +190,7 @@ body {
     margin: 0 auto;
 }
 
-.tarjetas .card {
+.card {
     position: relative;
     width: 165px; /* Reduce el ancho de la tarjeta */
     height: 150px; /* Establece una altura más baja */
@@ -202,7 +205,7 @@ body {
     overflow: hidden; /* Para asegurar que la flecha no se desborde fuera de la card */
 }
 
-.tarjetas .card .icon-container {
+.card .icon-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -216,7 +219,7 @@ body {
     margin-bottom: 20px;
 }
 
-.tarjetas .card a {
+.card a {
     font-size: 1em;
     font-weight: bold;
     color: #333;
@@ -225,14 +228,14 @@ body {
     display: block;
 }
 
-.tarjetas .card p {
+.card p {
     font-size: 0.85em;
     color: #666;
     margin: 0; 
 }
 
 /* Flecha en la parte inferior derecha */
-.tarjetas .card .arrow {
+.card .arrow {
     position: absolute;
     bottom: 15px;  /* Ajusta la posición para no estar tan cerca del borde */
     right: 15px;  /* Ajusta la posición para no estar tan cerca del borde */
@@ -243,7 +246,7 @@ body {
 }
 
 /* Línea azul en el borde inferior */
-.tarjetas .card .line {
+.card .line {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -255,15 +258,15 @@ body {
 }
 
 /* Mostrar flecha y línea al pasar el ratón */
-.tarjetas .card:hover .arrow {
+ .card:hover .arrow {
     opacity: 1; /* Hace visible la flecha */
 }
 
-.tarjetas .card:hover .line {
+.card:hover .line {
     opacity: 1; /* Hace visible la línea */
 }
 
-.tarjetas .card:hover {
+.card:hover {
     transform: translateY(-10px); /* Levanta la card un poco al hacer hover */
 }
 
@@ -302,30 +305,30 @@ body {
     justify-content: center; /* Centra los elementos verticalmente */
     padding: 130px; /* Espacio interno */
     height: 10vh; /* Ajusta la altura a un 80% de la altura de la ventana */
-    background-image: url('/static/img/manocontablet.jpg'); /* Cambia 'ruta-de-tu-imagen.jpg' por la URL de tu imagen */
+    background-image: url('/static/img/manocontablet.jpg'); 
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen en el contenedor */
     color: white; /* Color de texto blanco, cambia según tu imagen */
 
-    .segunda-foto-section .text-content p {
+   .text-content p {
         font-size: 0.8em;
         margin-left: 20%;
         margin-right: 20%;
     }
     
-    .segunda-foto-section .text-content h1 {
+    .text-content h1 {
         font-size: 2em;
         margin-left: 20%;
         margin-right: 20%;
     }
     
-    .segunda-foto-section text-content {
+    .text-content {
         display: flex; /* Usa flexbox para el contenido del texto */
         flex-direction: column; /* Coloca h1 y p en una columna */
         max-width: 60%; /* Ajusta el ancho máximo del texto */
     }
     
-    .segunda-foto-section a {
+    a {
         background-color: var(--secondary-color);
         color: white; /* Color del texto del enlace */
         padding: 5px 10px; /* Espaciado interno del enlace */
@@ -335,7 +338,7 @@ body {
         margin: 0 10%;
     }
     
-    .segunda-foto-section a:hover {
+    a:hover {
         background-color: lightgray; /* Cambio de fondo al pasar el mouse */
     }
     
@@ -353,48 +356,57 @@ body {
     margin: 0 15%; /* Márgenes izquierdo y derecho de 10% */
     color: black; /* Color del texto, puedes cambiarlo según tu preferencia */
 
-    .seccion-imagen-y-texto .image-container {
+    .image-container {
         position: relative; /* Establece un contenedor relativo para las imágenes */
     }
     
-    .seccion-imagen-y-texto img {
+    img {
         max-width: 30%; /* Hacer que la imagen de fondo ocupe todo el ancho disponible */
         height: auto; /* Mantener la proporción de la imagen */
+        position: relative; /* Hacer que la imagen sea posicionada de forma relativa */
+        left: 30%; 
     }
     
-    .seccion-imagen-y-texto .overlay-image {
+    .overlay-image {
         position: absolute; /* Posiciona la imagen de forma absoluta sobre la imagen de fondo */
         top: 50%; /* Ajusta la distancia desde el top, puedes cambiar este valor */
-        left: 0%; /* Ajusta la distancia desde el left, puedes cambiar este valor */
+        left: 10%; /* Ajusta la distancia desde el left, puedes cambiar este valor */
         width: 30%; /* Ajusta el tamaño de la imagen superpuesta */
         height: auto; /* Mantiene la proporción de la imagen */
         z-index: 10; /* Asegúrate de que la imagen esté por encima de la imagen de fondo */
     }
     
-    .seccion-imagen-y-texto .text-content {
-        max-width: 65%; /* Limitar el ancho del texto al 65% del contenedor */
-        margin-left: 20px; /* Espacio entre la imagen y el texto */
+    .text-content {
+        max-width: 60%; /* Limitar el ancho del texto al 65% del contenedor */
+        margin-left: 0px; /* Espacio entre la imagen y el texto */
     }
     
-    .seccion-imagen-y-texto .text-content h1 {
+    .text-content h1 {
         font-size: 1em; /* Tamaño de letra más pequeño para el h1 */
         margin: 0; /* Quitar márgenes por defecto del h1 */
     }
     
-    .seccion-imagen-y-texto .text-content article {
+   .text-content article {
         margin-top: 15px; /* Espaciado entre artículos */
     }
     
-    .seccion-imagen-y-texto .text-content h2 {
+    .text-content h2 {
         font-size: 0.8em; /* Tamaño de letra más pequeño para los h2 */
         margin: 0; /* Quitar márgenes por defecto del h2 */
     }
     
-    .seccion-imagen-y-texto .text-content p {
+    .text-content p {
         font-size: 0.7em; /* Tamaño de letra más pequeño para los párrafos */
         margin-top: 5px; /* Espaciado entre el h2 y el párrafo */
     }
-    
+
+    .text-content article i {
+        display: inline-block; /* Asegura que el icono y el título estén en la misma línea */
+        margin-right: 10px; /* Espacio entre el icono y el texto */
+        font-size: 1.5rem; /* Tamaño del icono */
+        vertical-align: middle; /* Alineación vertical con el texto */
+        color: blue;
+    } 
 }
 
 
@@ -443,8 +455,7 @@ body {
 
 
 .pricing-section {
-    background: #A3D3E7; /* Color de fondo de la sección */
-    padding: 50px 5%; /* Espaciado interno */
+    padding: 30px 20%; /* Espaciado interno */
 
     .centered-content {
         text-align: center; /* Centrar el contenido */
@@ -459,7 +470,7 @@ body {
     }
     
     .card {
-        background: var(--primary-color); /* Color de fondo de las tarjetas */
+        background: #f5f5f5; /* Color de fondo de las tarjetas */
         width: 20%; /* Ancho de cada tarjeta */
         margin: 0; /* Margen entre las tarjetas */
         padding: 20px; /* Espaciado interno */
@@ -469,28 +480,28 @@ body {
         height: 270px; /* Altura de cada tarjeta */
         font-size: 0.8em;
         position: relative; /* Necesario para la línea de la parte inferior */
-    }
-    
-    .card a {
-        display: inline-block; /* Para que el fondo abarque el contenido completo */
-        font-weight: bold; /* Negrita para los enlaces */
-        background-color: var(--primary-color);
-        color: blue; /* Color del texto del enlace */
-        padding: 8px 12px; /* Espaciado interno del enlace */
-        border-radius: 5px; /* Bordes redondeados */
-        border: 1px solid #7a7a7a;
-        text-decoration: none; /* Sin subrayado */
-        transition: color 0.3s ease;
-    }
-    
-    .card a:hover {
-        background-color: blue; /* Fondo azul en hover */
-        color: white; /* Texto blanco en hover */
-        position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
+
+        a {
+            display: inline-block; /* Para que el fondo abarque el contenido completo */
+            font-weight: bold; /* Negrita para los enlaces */
+            background-color: var(--primary-color);
+            color: blue; /* Color del texto del enlace */
+            padding: 8px 12px; /* Espaciado interno del enlace */
+            border-radius: 5px; /* Bordes redondeados */
+            border: 1px solid #7a7a7a;
+            text-decoration: none; /* Sin subrayado */
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: blue; /* Fondo azul en hover */
+            color: white; /* Texto blanco en hover */
+            position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
+        }
     }
     
     /* Línea en la parte inferior de la tarjeta */
-.card::after {
+    .card::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -500,12 +511,12 @@ body {
     background-color: blue;
     opacity: 0; /* Inicialmente invisible */
     transition: opacity 0.3s ease; /* Suaviza la transición de visibilidad */
-}
+    }
 
-/* Mostrar la línea al hacer hover sobre el enlace */
-.card:hover::after {
+    /* Mostrar la línea al hacer hover sobre el enlace */
+    .card:hover::after {
     opacity: 1; /* La línea se vuelve visible cuando se pasa el ratón sobre la tarjeta */
-}
+    }
     
     .card ul {
         list-style-type: none; /* Sin viñetas */
@@ -517,15 +528,19 @@ body {
     }
     
     .precio {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 }
 
 
 
+
+
 /* LATEST NEWS */
 .latest-section {
-    padding: 40px; /* Espaciado interno */
+    max-width: 1200px; /* Limita el ancho total del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 40px 20px; /* Espaciado interno */
     background-color: #f9f9f9; /* Color de fondo */
 
     .section-title {
@@ -535,38 +550,52 @@ body {
     }
     
     .card-container {
-        display: grid; /* Usa grid para organizar las tarjetas */
-        grid-template-columns: repeat(4, 1fr); /* 4 tarjetas en una fila */
-        gap: 20px; /* Espacio entre las tarjetas */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajusta el tamaño mínimo */
+        gap: 15px; /* Espacio entre las tarjetas */
     }
     
     .latest-card {
+        min-height: 180px; /* Mantén una altura mínima para asegurar la proporción */
         position: relative; /* Para permitir la posición absoluta de la flecha */
         background-color: white; /* Color de fondo de las tarjetas */
         border: 1px solid #ddd; /* Borde de las tarjetas */
         border-radius: 8px; /* Bordes redondeados */
-        padding: 20px; /* Espaciado interno */
+        padding: 15px; /* Espaciado interno */
         box-shadow: 0 4px 8px rgba(0, 0, 0/ 10%); /* Sombra de las tarjetas */
         transition: transform 0.3s; /* Efecto de transición */
         font-size: 0.7em;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-    }
+        justify-content: center;
+        align-items: center; 
+        text-align: left;
 
-    .latest-section .latest-card .arrow-icon {
-        position: absolute;
-        bottom: 10px; /* Ajusta según el espacio que desees desde el borde */
-        right: 10px;
-        font-size: 1.2em; /* Tamaño de la flecha */
-        color: gray; /* Color de la flecha */
-        transition: color 0.3s;
-    }
+        ul {
+            list-style-type: none; /* Sin viñetas */
+            padding: 0; /* Sin padding */
+            margin: 0; /* Sin margen */
+        }
+        
+        h4 {
+            margin: 0; /* Sin margen en el encabezado */
+            font-weight: bold; /* Negrita para el encabezado */
+        }
+
+        .arrow-icon {
+            position: absolute;
+            bottom: 10px; /* Ajusta según el espacio que desees desde el borde */
+            right: 10px;
+            font-size: 1.2em; /* Tamaño de la flecha */
+            color: gray; /* Color de la flecha */
+            transition: color 0.3s;
     
-    .latest-section .latest-card:hover .arrow-icon {
-        color: blue; /* Cambia de color al pasar el ratón */
-        transition: color 0.3s ease;
-    }
+            :hover .arrow-icon {
+                color: blue; /* Cambia de color al pasar el ratón */
+                transition: color 0.3s ease;
+            }
+        }
+    }  
     
     .latest-card:first-child {
         background-image: url('/static/img/latest-card-1ero.jpg'); 
@@ -578,19 +607,7 @@ body {
     .latest-card:hover {
         transform: translateY(-5px); /* Elevación al pasar el ratón */
     }
-    
-    .latest-card ul {
-        list-style-type: none; /* Sin viñetas */
-        padding: 0; /* Sin padding */
-        margin: 0; /* Sin margen */
-    }
-    
-    .latest-card h4 {
-        margin: 0; /* Sin margen en el encabezado */
-        font-weight: bold; /* Negrita para el encabezado */
-    }
-    
-    
+ 
     .profile-pic {
         display: inline-block;
         margin-right: 10px; /* Espacio a la derecha de la imagen */
@@ -599,13 +616,14 @@ body {
         overflow: hidden;
         border-radius: 50%; /* Hace la imagen circular */
         margin-top: 30px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen cubra todo el círculo */
+        }
     }
     
-    .profile-pic img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Asegura que la imagen cubra todo el círculo */
-    }
 }
 
 
@@ -772,7 +790,7 @@ footer {
     }
 
     .card-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila en pantallas pequeñas */
+        grid-template-columns: 1fr; 
     }
 }
 
