@@ -1,0 +1,775 @@
+/* Estilos Generales */
+
+:root{
+    --primary-color: #fdf6f8;
+    --secondary-color: #0056b3;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --border-color: #ccc;
+  
+    font-size: 16px;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Contenedor que abarca tanto el header como la primera sección */
+.background-container {
+    position: relative;
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/static/img/nav-section1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Texto blanco para visibilidad sobre la imagen */
+}
+
+/* Estilos para el header */
+.main-header {
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex;
+    justify-content: space-between; /* Distribuye espacio entre logo y navegación */
+    align-items: center;
+    padding: 10px 20px; /* Espaciado superior reducido */
+    text-align: end;
+    position: relative; /* Para que esté en la parte superior */
+    font-size:0.60em;
+}
+
+/* Estilo para el logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre imagen y título */
+    margin-bottom: auto; /* Empuja el logo al principio */
+}
+
+.logo img {
+    width: 50px; /* Tamaño de la imagen del logo */
+    height: auto;
+}
+
+.logo h5 {
+    color: white;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.main-header nav {
+    margin-left: 150px; /* Ajusta el margen izquierdo del nav si es necesario */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
+    padding: 10px 0; /* Ajusta el espacio alrededor del contenido */
+   
+}
+
+/* Estilo para el nav */
+.main-header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    margin-right: 35%;
+    gap: 5px; /* Espacio entre los elementos del menú */
+}
+
+.main-header nav ul li a.get-started {
+    background-color: #007bff; /* Azul típico */
+    color: white;              /* Texto en blanco */
+    padding: 10px 20px;        /* Espaciado interno para darle apariencia de botón */
+    border-radius: 5px;        /* Bordes redondeados */
+    text-decoration: none;     /* Sin subrayado */
+    font-weight: bold;         /* Texto en negrita */
+}
+
+.main-header nav ul li a.get-started:hover {
+    background-color: #0056b3; /* Azul más oscuro para el efecto hover */
+}
+
+.intro-section h1, .intro-section p {
+    margin-left: 20%;  
+    margin-right: 20%; 
+}
+
+/* Enlace PLAY dentro de la sección */
+.intro-section a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; 
+    height: 50px;
+    background-color: blue; /* Color de fondo del círculo */
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    text-decoration: none; /* Quita subrayado del enlace */
+    color: white; /* Color del icono en el centro */
+    font-size: 24px; /* Tamaño del triángulo */
+    position: relative;
+    margin-top: 20px; /* Añade margen superior si es necesario */
+}
+
+.intro-section a::before {
+    content: '►'; /* Triángulo de play */
+    font-size: 24px; /* Tamaño del triángulo */
+    color: white; /* Color del triángulo */
+}
+
+.main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0 / 50%); /* Fondo semi-transparente para los enlaces */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.main-header nav ul li a:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* Estilos para la primera sección */
+.intro-section {
+    padding: 50px 20px; /* Ajusta el padding para reducir espacio superior */
+    text-align: center;
+}
+
+.centered-content h1 {
+    font-size: 2rem; /* Ajusta el tamaño del título */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+/* Estilo del encabezado dentro de la sección */
+.intro-section header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+
+
+
+.tarjetas {
+    margin: 0; /* Elimina el margen para que el contenido quede más compacto */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Centra el texto */
+}
+
+    /* Estilos para centrar el contenido */
+.tarjetas .centered-content {
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.centered-content p {
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en cada fila */
+    gap: 20px;
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.tarjetas .card {
+    position: relative;
+    width: 165px; /* Reduce el ancho de la tarjeta */
+    height: 150px; /* Establece una altura más baja */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0/ 10%);
+    background-color: white;
+    transition: transform 0.3s ease;
+    font-size: 0.7em;
+    text-align: left;
+    overflow: hidden; /* Para asegurar que la flecha no se desborde fuera de la card */
+}
+
+.tarjetas .card .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;  /* Esto hace el círculo */
+    background-color: #007bff;  /* Fondo azul */
+    color: white;  /* Icono en blanco */
+    font-size: 18px;  /* Ajusta el tamaño del icono */
+    margin-right: 10px;  /* Espacio a la derecha para separar el icono del texto */
+    margin-bottom: 20px;
+}
+
+.tarjetas .card a {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.tarjetas .card p {
+    font-size: 0.85em;
+    color: #666;
+    margin: 0; 
+}
+
+/* Flecha en la parte inferior derecha */
+.tarjetas .card .arrow {
+    position: absolute;
+    bottom: 15px;  /* Ajusta la posición para no estar tan cerca del borde */
+    right: 15px;  /* Ajusta la posición para no estar tan cerca del borde */
+    font-size: 0.9em;
+    color: #007bff;  /* Color de la flecha */
+    opacity: 0;  /* Flecha inicialmente invisible */
+    transition: opacity 0.3s ease;
+}
+
+/* Línea azul en el borde inferior */
+.tarjetas .card .line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Grosor de la línea */
+    background-color: #007bff; /* Línea azul */
+    opacity: 0; /* Línea inicialmente invisible */
+    transition: opacity 0.3s ease;
+}
+
+/* Mostrar flecha y línea al pasar el ratón */
+.tarjetas .card:hover .arrow {
+    opacity: 1; /* Hace visible la flecha */
+}
+
+.tarjetas .card:hover .line {
+    opacity: 1; /* Hace visible la línea */
+}
+
+.tarjetas .card:hover {
+    transform: translateY(-10px); /* Levanta la card un poco al hacer hover */
+}
+
+.view-all-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #7a7a7a; /* Color gris para el texto */
+    border: 1px solid #7a7a7a; /* Borde gris */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center; 
+    margin: 20px auto;
+    font-size: 0.6em;
+}
+
+.view-all-button:hover {
+    background-color: #f0f0f0; /* Fondo gris claro al pasar el ratón */
+    color: #5a5a5a; /* Texto gris oscuro al pasar el ratón */
+}
+
+
+
+
+
+
+
+.segunda-foto-section {
+    display: flex; /* Usa flexbox para organizar el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra los elementos verticalmente */
+    padding: 130px; /* Espacio interno */
+    height: 10vh; /* Ajusta la altura a un 80% de la altura de la ventana */
+    background-image: url('/static/img/manocontablet.jpg'); /* Cambia 'ruta-de-tu-imagen.jpg' por la URL de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen en el contenedor */
+    color: white; /* Color de texto blanco, cambia según tu imagen */
+}
+
+.segunda-foto-section .text-content p {
+    font-size: 0.8em;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.segunda-foto-section .text-content h1 {
+    font-size: 2em;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.segunda-foto-section text-content {
+    display: flex; /* Usa flexbox para el contenido del texto */
+    flex-direction: column; /* Coloca h1 y p en una columna */
+    max-width: 60%; /* Ajusta el ancho máximo del texto */
+}
+
+.segunda-foto-section a {
+    background-color: var(--secondary-color);
+    color: white; /* Color del texto del enlace */
+    padding: 5px 10px; /* Espaciado interno del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+    margin: 0 10%;
+}
+
+.segunda-foto-section a:hover {
+    background-color: lightgray; /* Cambio de fondo al pasar el mouse */
+}
+
+
+
+
+
+.seccion-imagen-y-texto {
+    display: flex; /* Usar flexbox para alinear los elementos */
+    align-items: flex-start; /* Alinear los elementos al inicio */
+    padding: 20px; /* Espaciado interno */
+    margin: 0 15%; /* Márgenes izquierdo y derecho de 10% */
+    color: black; /* Color del texto, puedes cambiarlo según tu preferencia */
+}
+
+.seccion-imagen-y-texto .image-container {
+    position: relative; /* Establece un contenedor relativo para las imágenes */
+}
+
+.seccion-imagen-y-texto img {
+    max-width: 30%; /* Hacer que la imagen de fondo ocupe todo el ancho disponible */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+.seccion-imagen-y-texto .overlay-image {
+    position: absolute; /* Posiciona la imagen de forma absoluta sobre la imagen de fondo */
+    top: 50%; /* Ajusta la distancia desde el top, puedes cambiar este valor */
+    left: 0%; /* Ajusta la distancia desde el left, puedes cambiar este valor */
+    width: 30%; /* Ajusta el tamaño de la imagen superpuesta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    z-index: 10; /* Asegúrate de que la imagen esté por encima de la imagen de fondo */
+}
+
+.seccion-imagen-y-texto .text-content {
+    max-width: 65%; /* Limitar el ancho del texto al 65% del contenedor */
+    margin-left: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.seccion-imagen-y-texto .text-content h1 {
+    font-size: 1em; /* Tamaño de letra más pequeño para el h1 */
+    margin: 0; /* Quitar márgenes por defecto del h1 */
+}
+
+.seccion-imagen-y-texto .text-content article {
+    margin-top: 15px; /* Espaciado entre artículos */
+}
+
+.seccion-imagen-y-texto .text-content h2 {
+    font-size: 0.8em; /* Tamaño de letra más pequeño para los h2 */
+    margin: 0; /* Quitar márgenes por defecto del h2 */
+}
+
+.seccion-imagen-y-texto .text-content p {
+    font-size: 0.7em; /* Tamaño de letra más pequeño para los párrafos */
+    margin-top: 5px; /* Espaciado entre el h2 y el párrafo */
+}
+
+
+
+
+
+.cuadrados {
+    background: #6aaaf3; /* Fondo azul más claro */
+    padding: 40px; /* Espaciado interno en la parte superior e inferior */
+    display: flex; /* Usar flexbox para alinear los cuadros */
+    justify-content:center; /* Espaciado entre los cuadros */
+    gap: 30px; /* Espaciado entre los cuadros */
+    flex-wrap: wrap; /* Permitir que los cuadros se envuelvan en múltiples filas */
+}
+
+.cuadro {
+    background: #ADD8E6; /* Azul claro para los rectángulos */
+    width: 200px; /* Ancho fijo para cada cuadro */
+    margin: 10px; /* Agregar margen en todos los lados */
+    padding: 20px; /* Espaciado interno en cada cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    color: black; /* Color del texto */
+    text-align: left; /* Centrando el texto dentro del cuadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0/ 20%); /* Sombra para mayor definición */
+}
+
+.cuadro h1 {
+    font-size: 2em; /* Tamaño del h1 */
+    margin: 0; /* Sin margen */
+}
+
+.cuadro h2 {
+    font-size: 1em; /* Tamaño del h2 */
+    margin: 10px 0; /* Margen arriba y abajo */
+}
+
+.cuadro p {
+    font-size: 0.8em; /* Tamaño del párrafo */
+    margin: 10px 0; /* Margen arriba y abajo */
+}
+
+
+
+
+.pricing-section {
+    background: #A3D3E7; /* Color de fondo de la sección */
+    padding: 50px 5%; /* Espaciado interno */
+
+    .centered-content {
+        text-align: center; /* Centrar el contenido */
+        margin-bottom: 30px; /* Espaciado inferior */
+    }
+    
+    .card-container {
+        display: flex; /* Usar flexbox para las tarjetas */
+        justify-content: space-around; /* Espacio entre las tarjetas */
+        flex-wrap: wrap; /* Permitir que las tarjetas se ajusten en pantallas más pequeñas */
+        gap: 10px; /* Espacio más ajustado entre tarjetas */
+    }
+    
+    .card {
+        background: var(--primary-color); /* Color de fondo de las tarjetas */
+        width: 20%; /* Ancho de cada tarjeta */
+        margin: 0; /* Margen entre las tarjetas */
+        padding: 20px; /* Espaciado interno */
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0/ 20%); /* Sombra */
+        text-align: center; /* Alinear el texto a la izquierda */
+        height: 270px; /* Altura de cada tarjeta */
+        font-size: 0.8em;
+        position: relative; /* Necesario para la línea de la parte inferior */
+    }
+    
+    .card a {
+        display: inline-block; /* Para que el fondo abarque el contenido completo */
+        font-weight: bold; /* Negrita para los enlaces */
+        background-color: var(--primary-color);
+        color: blue; /* Color del texto del enlace */
+        padding: 8px 12px; /* Espaciado interno del enlace */
+        border-radius: 5px; /* Bordes redondeados */
+        border: 1px solid #7a7a7a;
+        text-decoration: none; /* Sin subrayado */
+        transition: color 0.3s ease;
+    }
+    
+    .card a:hover {
+        background-color: blue; /* Fondo azul en hover */
+        color: white; /* Texto blanco en hover */
+        position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
+    }
+    
+    /* Línea en la parte inferior de la tarjeta */
+.card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: blue;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease; /* Suaviza la transición de visibilidad */
+}
+
+/* Mostrar la línea al hacer hover sobre el enlace */
+.card:hover::after {
+    opacity: 1; /* La línea se vuelve visible cuando se pasa el ratón sobre la tarjeta */
+}
+    
+    .card ul {
+        list-style-type: none; /* Sin viñetas */
+        padding: 0; /* Sin espaciado interno */
+    }
+    
+    .card li {
+        margin: 10px 0; /* Margen entre los elementos de la lista */
+    }
+    
+    .precio {
+        font-size: 1.5em;
+    }
+}
+
+
+
+/* LATEST NEWS */
+.latest-section {
+    padding: 40px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Color de fondo */
+
+    .section-title {
+        text-align: left; /* Alinea el título a la izquierda */
+        font-size: 1.5rem; /* Tamaño del texto del título */
+        margin-bottom: 20px; /* Margen inferior */
+    }
+    
+    .card-container {
+        display: grid; /* Usa grid para organizar las tarjetas */
+        grid-template-columns: repeat(4, 1fr); /* 4 tarjetas en una fila */
+        gap: 20px; /* Espacio entre las tarjetas */
+    }
+    
+    .latest-card {
+        position: relative; /* Para permitir la posición absoluta de la flecha */
+        background-color: white; /* Color de fondo de las tarjetas */
+        border: 1px solid #ddd; /* Borde de las tarjetas */
+        border-radius: 8px; /* Bordes redondeados */
+        padding: 20px; /* Espaciado interno */
+        box-shadow: 0 4px 8px rgba(0, 0, 0/ 10%); /* Sombra de las tarjetas */
+        transition: transform 0.3s; /* Efecto de transición */
+        font-size: 0.7em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .latest-section .latest-card .arrow-icon {
+        position: absolute;
+        bottom: 10px; /* Ajusta según el espacio que desees desde el borde */
+        right: 10px;
+        font-size: 1.2em; /* Tamaño de la flecha */
+        color: gray; /* Color de la flecha */
+        transition: color 0.3s;
+    }
+    
+    .latest-section .latest-card:hover .arrow-icon {
+        color: blue; /* Cambia de color al pasar el ratón */
+        transition: color 0.3s ease;
+    }
+    
+    .latest-card:first-child {
+        background-image: url('/static/img/latest-card-1ero.jpg'); 
+        background-size: cover;
+        background-position: center;
+        color: white; /* Para que el texto se vea sobre la imagen */
+    }
+
+    .latest-card:hover {
+        transform: translateY(-5px); /* Elevación al pasar el ratón */
+    }
+    
+    .latest-card ul {
+        list-style-type: none; /* Sin viñetas */
+        padding: 0; /* Sin padding */
+        margin: 0; /* Sin margen */
+    }
+    
+    .latest-card h4 {
+        margin: 0; /* Sin margen en el encabezado */
+        font-weight: bold; /* Negrita para el encabezado */
+    }
+    
+    
+    .profile-pic {
+        display: inline-block;
+        margin-right: 10px; /* Espacio a la derecha de la imagen */
+        width: 40px; /* Ajusta el tamaño de la imagen */
+        height: 40px;
+        overflow: hidden;
+        border-radius: 50%; /* Hace la imagen circular */
+        margin-top: 30px;
+    }
+    
+    .profile-pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que la imagen cubra todo el círculo */
+    }
+}
+
+
+
+
+
+.get-in-touch {
+    background-image: url('/static/img/get-in-touch.jpg'); /* Cambia por la URL de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    width: 100%; /* Ancho completo */
+    height: 70vh; /* Altura completa de la ventana */
+    display: flex; /* Flexbox para centrar contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    color: white; /* Color de texto blanco */
+    text-align: center; /* Centra el texto */
+
+
+    .content {
+        padding: 400px; /* Espaciado interno */
+        background-color: rgba(0, 0, 0/ 50%); /* Fondo negro semi-transparente para mejorar la legibilidad */
+        border-radius: 10px; /* Bordes redondeados */
+    }
+    
+    .content p {
+        font-size: 1.5em;
+    }
+    
+    .contact-us-button {
+        display: inline-block; /* Muestra el botón como un bloque en línea */
+        background-color: blue; /* Fondo azul */
+        color: white; /* Texto blanco */
+        padding: 10px 20px; /* Espaciado interno del botón */
+        border-radius: 5px; /* Bordes redondeados del botón */
+        text-decoration: none; /* Sin subrayado */
+        margin-top: 10px; /* Margen superior para separación */
+        transition: background-color 0.3s; /* Transición suave para el fondo */
+    }
+    
+    .contact-us-button:hover {
+        background-color: darkblue; /* Cambia el color al pasar el ratón */
+    }
+}
+
+
+
+
+.contacto-final {
+    background-color: #f5f5f5; /* Fondo gris claro */
+    padding: 40px 20px; /* Espaciado alrededor de la sección */
+}
+
+.grid-contacto-final {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el número de columnas */
+}
+
+.grid-contacto-final div {
+    padding: 10px;
+}
+
+h4, h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333; /* Cambia el color del texto de los enlaces */
+}
+
+ul li a:hover {
+    color: #007BFF; /* Color en hover */
+    text-decoration: underline; /* Subrayado en hover */
+}
+
+.prelude {
+    grid-column: span 2; /* La sección "Prelude" ocupará más espacio en pantallas grandes */
+}
+
+.prelude-header {
+    display: flex;
+    align-items: center;
+}
+
+.logo-prelude {
+    width: 50px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.about, .products, .resources, .offices {
+    display: flex;
+    flex-direction: column;
+}
+
+.offices p {
+    margin: 0;
+}
+
+.telefono-azul{
+    color:#007BFF;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.social-icons a:active {
+    color: #0056b3; /* Color azul más oscuro al hacer clic */
+}
+
+
+footer {
+    display: flex; /* Usa flexbox para organizar el contenido */
+    justify-content: space-between; /* Espacia los elementos a los extremos */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 10px 20px; /* Espacio interno */
+    background-color: #f7f0f0; /* Gris muy claro */
+}
+
+
+
+
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .cuadrados {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar los cuadros */
+    }
+
+    .cuadro {
+        width: 90%; /* Ancho del cuadro para pantallas pequeñas */
+        margin: 10px 0; /* Espacio vertical entre los cuadros */
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr; /* 1 tarjeta por fila en pantallas muy pequeñas */
+    }
+}
